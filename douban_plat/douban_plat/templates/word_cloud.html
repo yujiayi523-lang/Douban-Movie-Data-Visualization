@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+</head>
+<body>
+<div class="main">
+    <header>电影词云</header>
+    <section>
+        <div id="chart">
+            <ul class="content">
+                <li>
+                    <p>电影名称</p>
+                    <div class="cloud">
+                        <img src="{{ url_for('static', filename='images/movie_names.png') }}" alt="词云"/>
+                    </div>
+                </li>
+                <li>
+                    <p>导演编剧</p>
+                    <div class="cloud">
+                        <img src="{{ url_for('static', filename='images/director_names.png') }}" alt="词云"/>
+                    </div>
+                </li>
+                <li>
+                    <p>电影类型</p>
+                    <div class="cloud">
+                        <img src="{{ url_for('static', filename='images/types.png') }}" alt="词云"/>
+                    </div>
+                </li>
+                <li>
+                    <p>发行时间</p>
+                    <div class="cloud">
+                        <img src="{{ url_for('static', filename='images/dates.png') }}" alt="词云"/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

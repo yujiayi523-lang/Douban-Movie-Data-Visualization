@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣网-可视化平台</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo-img">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"/>
+            </div>
+            <div class="logo-text">可视化数据分析平台</div>
+        </header>
+        <section>
+            <div class="nav">
+                <dl>
+                    <dt>首页</dt>
+                    <dd href="movie_list">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <span>电影列表</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>数据图表</dt>
+                    <dd href="/movie_by_year"><span class="glyphicon glyphicon-calendar"></span><span>各年份上映电影数量</span></dd>
+                    <dd href="/movie_type_percent"><span class="glyphicon glyphicon-stats"></span><span>电影类型占比</span></dd>
+                    <dd href="/name_and_rating"><span class="glyphicon glyphicon-globe"></span><span>电影评分抽样</span></dd>
+                    <dd href="/movie_top"><span class="glyphicon glyphicon-sort-by-alphabet"></span><span>电影榜单TOP10</span></dd>
+                    <dd href="/rater_top"><span class="glyphicon glyphicon-sort-by-alphabet"></span><span>电影评价人数TOP20</span></dd>
+                </dl>
+                <dl>
+                    <dt>词云</dt>
+                    <dd href="/word_cloud"><span class="glyphicon glyphicon-cloud"></span><span>电影词云</span></dd>
+                </dl>
+            </div>
+            <div class="content">
+                <iframe></iframe>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
